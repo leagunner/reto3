@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Listado de compras</h1>
+    </header>
+    <section>
+        <div id="contenedor-borrable">
+            <p>¡Uia! Parece que no hay nada che. ¡Dale se un héroe capitalista y comprá comprá! ¡COMPRÁ!</p>
+            <img src="images/triste.png" alt="Triste">
+        </div>
+        <button type="button" class="btn btn-success" id="boton-add">+</button>
+        <!--Contenido oculto por defecto-->
+        <ul class="list-group" id="contenedor-listado">
+
+        </ul>
+        <ul class="list-group" id="contenedor-detalles">
+            
+        </ul>
+        <!--Popup de selector de productos-->
+        <div id="contenedor-popup">
+            <a href="#"id="logo-cierre"><img src="images/cerrar.png" alt="cerrar"></a>
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-3">
+                    <label for="validationCustom01" class="form-label">Nombre delproducto</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Ejemplo: Salchicha" required>
+                    <div class="valid-feedback">
+                    ¡Bárbaro!
+                    </div>
+                    <div class="invalid-feedback">
+                        ¿Ah sos chistoso?
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="validationCustom04" class="form-label"required>Tipo de producto</label>
+                    <select class="form-select" id="validationCustom04">
+                    <option value="viberes">Víberes</option>
+                    <option value="2">Lácteos</option>
+                    <option value="3">Verduras</option>
+                    <option value="4">Electrónica</option>
+                    </select>
+                    <div class="valid-feedback">
+                        ¡Crack!
+                    </div>
+                    <div class="invalid-feedback">
+                        ¿Ah sos chistoso?
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Si me usás quedas re pro"></textarea>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit" id="boton-añadir" disabled >Añadir</button>
+                </div>
+            </form>
+        </div>
+    </section> 
+    <script src="script/myscript.js"></script>
+</body>
+</html>
