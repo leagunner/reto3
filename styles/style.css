@@ -1,33 +1,197 @@
-#contenedor-popup{
-    display: none;
+@media only screen and (max-width: 1920px) {
+    body{
+        background: #4b8bb4;
+        color: white
+    }
+    header{
+        padding: 50px;
+        text-align: center;
+        color: #293536;
+        padding:10px 0;
+    }
+    header h1{
+        font-size: 60px;
+        color: white;
+        text-transform: uppercase;
+    }
+    #contenedor-popup{
+        display: none;
+    }
+    #contenedor-popup form{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+        text-align: center;
+        margin: 200px;
+        font-size: 30px;
+    }
+    .li-listado{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #4b8bb4;
+        border: none;
+        margin: 0 20% 
+    }
+    #contenedor-detalles{
+        display: none;
+    }
+    #contenedor-detalles .li-detalles{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background: #4b8bb4;
+        border: none;
+    }
+    #contenedor-detalles .li-detalles p{
+        font-size: 20px;
+    }
+    #contenedor-detalles img{
+        width: 200px;
+        margin: 50px;
+    }
+    #contenedor-detalles h1{
+        font-size: 50px;
+        text-transform: uppercase;
+    }
+    
+    #logo-cierre img, #logo-cierre-detalles img{
+        width: 30px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        margin: 0;
+    }
+    #logos{
+        width: 100px;
+    }
+    .iconos{
+        display: none;
+    }
+    #contenedor-borrable{
+        text-align: center;
+        font-size: 20px;
+    }
+    #contenedor-borrable img{
+        width: 150px;
+    }
+    .btn{
+        font-size: 30px;
+        padding: 30px;
+        border-radius: 50px;
+        position: absolute;
+        bottom: 200px;
+        right: 200px;
+        background: #b4744b;
+    }
+    .btn:hover{
+        background: #ce5d17;
+    }
+    h4{
+        display: inline;
+        font-size: 40px;
+    }
+    .chulito{
+        width: 100px;
+        float: right;
+    }
+    .logos{
+        width: 50px;
+    }
 }
-#contenedor-detalles{
-    display: none;
-}
-#logo-cierre img, #logo-cierre-detalles img{
-    width: 20px;
-}
-#logos{
-    width: 50px;
-}
-.iconos{
-    display: none;
-}
-#contenedor-borrable img{
-    width: 150px;
-}
-.btn{
-    font-size: 30px;
-    padding: 30px;
-    border-radius: 50px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-h4{
-    display: inline;
-}
-#chulardi img, .chulito{
-    width: 50px;
-    float: right;
+@media only screen and (max-width: 812px) {
+    body{
+        background: #4b8bb4;
+        color: white
+    }
+    header{
+        text-align: center;
+        color: #293536;
+    }
+    header h1{
+        font-size: 25px;
+        color: white;
+        text-transform: uppercase;
+    }
+    #contenedor-popup{
+        display: none;
+    }
+    #contenedor-popup form{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+        text-align: center;
+        margin: 0;
+        font-size: 20px;
+    }
+    .li-listado{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #4b8bb4;
+        border: none;
+        margin: 0;
+    }
+    #contenedor-detalles{
+        display: none;
+    }
+    #contenedor-detalles .li-detalles{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background: #4b8bb4;
+        border: none;
+    }
+    #contenedor-detalles img{
+        width: 200px;
+        margin: 50px
+    }
+    #contenedor-detalles h1{
+        font-size: 50px;
+        text-transform: uppercase;
+    }
+    
+    #logo-cierre img, #logo-cierre-detalles img{
+        width: 30px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        margin: 0;
+    }
+    #logos{
+        width: 50px;
+    }
+    .iconos{
+        display: none;
+    }
+    #contenedor-borrable{
+        text-align: center;
+    }
+    #contenedor-borrable img{
+        width: 150px;
+    }
+    .btn{
+        font-size: 30px;
+        padding: 30px;
+        border-radius: 50px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+    .btn:hover{
+        background: #ce5d17;
+    }
+    h4{
+        display: inline;
+        
+    }
+    #chulardi img, .chulito{
+        width: 50px;
+        float: right;
+    }
+    .logos{
+        width: 50px;
+    }
 }

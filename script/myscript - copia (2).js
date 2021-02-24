@@ -37,7 +37,9 @@ cerrar.addEventListener('click', function(){
     botonAdd.style.display = 'block'
     contenedorListado.style.display = 'block'
 })
-
+document.addEventListener('click',function(e){
+    console.log(e.getAttribute)
+})
 //ay dios mio arrancando motores para lo de mas abajito
 let contenedorBorrable = document.getElementById('contenedor-borrable')
 let botonAñadir = document.getElementById('boton-añadir')
@@ -48,7 +50,7 @@ let logoLacteos = document.getElementById('logo-lacteos')
 let logoVerduras = document.getElementById('logo-verduras')
 let logoViberes = document.getElementById('logo-viberes')
 let descripcion = document.getElementById('exampleFormControlTextarea1')
-
+let nombreProducto = document.getElementById('validationCustom01')
 //Ocultar texto, fantasma triste, mostrar boton "+" despues de pulsar "añadir, agregar imagenes segun la eleccion de la lista  agregar el titulo escrito por el usuario y chulardi" 
 
 botonAñadir.addEventListener('click', function(){  //Añadiendo funcion al boton
@@ -59,45 +61,28 @@ botonAñadir.addEventListener('click', function(){  //Añadiendo funcion al boto
 
     if(tipoProducto.value == 1){ //comprobando el valor de la seleccion del tipo de producto
         let tituloProducto = `${nombreProducto.value}`
+        let detallesProducto = `${descripcion.value}`
+        
+
         let modelo = `<li class="list group item"><img src="images/viberes.png" alt="Viberes" id="logos"> <h4>${tituloProducto}</h4><a href="#" id="chulardi" ><img src="images/chulardi.png" alt="Chulote"></a></li>` //agregando elemento a lista + link+ imagen+ titulo del producto hecho por el usuario + chulito
         contenedorListado.innerHTML += modelo
-        
-        let chulardiBoton = document.getElementById('chulardi') 
-        chulardiBoton.addEventListener('click',function(){  //Aplicandole la funcion de desaparecer el listado para ver los detalles
-            contenedorListado.style.display = 'none'
-            let contenedorDetalles = document.getElementById('contenedor-detalles')
-            contenedorDetalles.style.display = 'block' //Mostrando el contenedor de los detalles
-            botonAdd.style.display = 'none'
-            contenedorDetalles.innerHTML = `<li class="list group item"><img src="images/viberes.png" alt="Viberes" id="logos"> <h1>${tituloProducto}</h1><a href="#"<a href="#"id="logo-cierre-detalles"><img src="images/cerrar.png" alt="cerrar"></a></li>`
-            let cerrarDetalles = document.getElementById('logo-cierre-detalles') // boton de cerrar detalles
-            cerrarDetalles.addEventListener('click', function(){
-                contenedorDetalles.style.display = 'none'
-                contenedorListado.style.display = 'block'
-                botonAdd.style.display = 'block'
-})
-        })
-        }
-    else if (tipoProducto.value == 2){
-        let tituloProducto = `${nombreProducto.value}`
-        contenedorListado.innerHTML += `<li class="list group item"><img src="images/lacteos.png" alt="Viberes" id="logos"> <h4>${tituloProducto}</h4><a href="#" id="chulardi"><img src="images/chulardi.png" alt="Chulote"></a></li>`
-        let chulardiBoton = document.getElementById('chulardi')
-        chulardiBoton.addEventListener('click',function(){
-            contenedorListado.style.display = 'none'
-        })
-    }
-    else if (tipoProducto.value == 3){
-        let tituloProducto = `${nombreProducto.value}`
-        contenedorListado.innerHTML += `<li class="list group item"><img src="images/verduras.png" alt="Verduras" id="logos"> <h4>${tituloProducto}</h4><a href="#" id="chulardi"><img src="images/chulardi.png" alt="Chulote"></a></li>`
-        }
-    else if (tipoProducto.value == 4){
-        let tituloProducto = `${nombreProducto.value}`
-        contenedorListado.innerHTML += `<li class="list group item"><img src="images/electronica.png" alt="Electronica" id="logos"> <h4>${tituloProducto}</h4><a href="#" id="chulardi"><img src="images/chulardi.png" alt="Chulote"></a></li>`
-        }}
-)
+
+        document.addEventListener('click',function(e){
+            if (e.target.className == "chulito"){                
+                contenedorListado.style.display = 'none'
+                let contenedorDetalles = document.getElementById('contenedor-detalles')
+                contenedorDetalles.style.display = 'block' //Mostrando el contenedor de los detalles
+                botonAdd.style.display = 'none'
+                document.getElementById("imagen-detalles").src = e.target.getAttribute("atributo-imagen")
+                document.getElementById("h1-detalles").innerHTML = e.target.getAttribute("atributo-nombre")
+                document.getElementById("p-detalles").innerHTML = e.target.getAttribute("atributo-detalles")
+                document.getElementById('logo-cierre-detalles').addEventListener('click', function(){
+                    contenedorDetalles.style.display = 'none'
+                    contenedorListado.style.display = 'block'
+                    botonAdd.style.display = 'block'
+    })}})}})
 //Validador de texto para botonera
-let nombreProducto = document.getElementById('validationCustom01')
 nombreProducto.addEventListener('keyup', function() {
     let valueDeTexto = nombreProducto.value.trim()
     botonAñadir.disabled = valueDeTexto == "" 
 })
-

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,17 +20,21 @@
         <button type="button" class="btn btn-success" id="boton-add">+</button>
         <!--Contenido oculto por defecto-->
         <ul class="list-group" id="contenedor-listado">
-
         </ul>
         <ul class="list-group" id="contenedor-detalles">
-            
+            <li class="list-group-item li-detalles">
+                <img src="" alt="" id="imagen-detalles">
+                <h1 id="h1-detalles"></h1>
+                <p id="p-detalles">asdas</p>
+            </li>
+            <a href="#"id="logo-cierre-detalles"><img src="images/cerrar.png" alt="cerrar"></a>
         </ul>
         <!--Popup de selector de productos-->
         <div id="contenedor-popup">
             <a href="#"id="logo-cierre"><img src="images/cerrar.png" alt="cerrar"></a>
             <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-3">
-                    <label for="validationCustom01" class="form-label">Nombre delproducto</label>
+                    <label for="validationCustom01" class="form-label">Nombre del producto</label>
                     <input type="text" class="form-control" id="validationCustom01" placeholder="Ejemplo: Salchicha" required>
                     <div class="valid-feedback">
                     ¡Bárbaro!
@@ -39,10 +43,10 @@
                         ¿Ah sos chistoso?
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <label for="validationCustom04" class="form-label"required>Tipo de producto</label>
                     <select class="form-select" id="validationCustom04">
-                    <option value="viberes">Víberes</option>
+                    <option value="1">Víberes</option>
                     <option value="2">Lácteos</option>
                     <option value="3">Verduras</option>
                     <option value="4">Electrónica</option>
@@ -58,12 +62,12 @@
                     <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Si me usás quedas re pro"></textarea>
                 </div>
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit" id="boton-añadir" disabled >Añadir</button>
-                </div>
+                    <div class="col-12">
+                        <button class="btn-añadir btn-primary" type="button" id="boton-añadir" disabled >Añadir</button>
+                    </div>
             </form>
         </div>
-    </section> 
+    </section>
     <script src="script/myscript.js"></script>
 </body>
 </html>
